@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    /* padding: 15px; */
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "navegacao navegacao navegacao navegacao"
+    "artigo1 artigo2 artigo3 artigo4"
+    "footer footer footer footer";
+}
+
+
+/* CONFIGURANDO GRID */
+.container .gridItem{
+    padding: 20px;
+}
+/* HEADER */
+.header{
+    grid-area: navegacao;
+    background-color: #c1c1c1;
+}
+/* ARTIGOS */
+article .artigo1{
+    grid-area: artigo1;
+}
+article .artigo2{
+    grid-area: artigo2;
+}
+article .artigo3{
+    grid-area: artigo3;
+}
+article .artigo4{
+    grid-area: artigo4;
+}
+/* RODAPÉ */
+footer{
+    grid-area: footer;
+}
+
+/* STILIZANDO */
+
+/* Cabeçalho */
+header a{
+    float: left;
+}
+header ul{
+    display: inline-block;
+    height: 100%;
+   
+}
+header ul li{
+    display: inline-block;
+    align-items: center;
+}
+header ul li a{
+    display: block;
+    padding: 31px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: red;
+    transition: 0.5s ease-out;
+}
+header ul li a:hover{
+    background-color: #ccc;
+    transition: 0.5s ease-in;
+}
+
+/* Artigos */
+article{
+    display: inline-block;
+    margin: 0 1%;
+    vertical-align: top;
+}
+article header h3{
+    display: inline-block;
+    background-color: red;
+    padding: 4px 8px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+article div.content{
+    background-color: #fff;
+    box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.4);
+    min-height: 300px;
+    text-align: center;
+}
+article div.title{
+    min-height: 100px;
+}
+article div.action{
+    padding: 10px 0;
+}
+article img{
+    width: 100%;
+}
+article h4{
+    padding: 4px 8px;
+    text-align: left;
+}
+
+/* Componentes Padrões */
+.btn{
+    display: inline-block;
+    background-color: rgb(215, 91, 38);
+    text-decoration: none;
+    padding: 8px 25px;
+    border-radius: 15px;
+    color: #fff;
+
+}
+
+
+/* FOOTER */
+footer{
+    /* position: absolute; */
+    width: 100%;
+    height: 200px;
+    background-color: #ccc;
+    bottom: 0;
+}
+footer .esquerda,
+footer .centro,
+footer .direita{
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+footer .esquerda h4,
+footer .centro h4,
+footer .direita h4{
+    font-size: 18px;
+}
+footer .direita{
+    padding-top: 40px;
+}
+footer .direita ul li{
+    list-style: none;
+}
+footer .assinatura{
+    padding: 25px 0;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
